@@ -1,0 +1,11 @@
+{
+  "name": "academia-arte-musical",
+  "version": "1.0.0",
+  "description": "Landing Page para una academia de arte musical, diseño realizado por Leonardo",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
