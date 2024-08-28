@@ -398,6 +398,60 @@ span{
 .semestre_description:hover, .temas:hover{
     scale: 1.01;
 }
+
+/* ESTUDIANTES DESTACADOS */
+.estudiantesDestacados{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    position: relative;
+}
+
+.containerEstudiantes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+}
+
+.flex-rigth{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.estudiante{
+    width: 100%;
+    display: flex;
+    padding: 2em;
+    border-radius: 10px;
+    border-bottom: 5px solid var(--colorEnfasis);
+    max-width: 800px; 
+    align-items: center;
+    gap: 2em;
+}
+
+.estudiante_img{
+    border-radius: 100%;
+    border: 5px solid var(--colorEnfasis);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.estudiante_info{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.estudiante_name{
+    font-size: 1.5rem;
+}
+
+.estudiante_description{
+    font-weight: var(--bold);
+}
+
+
+
 /* OPINIONES */
 .opiniones{
     display: flex;
