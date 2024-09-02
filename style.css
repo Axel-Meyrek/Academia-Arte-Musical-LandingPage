@@ -99,6 +99,7 @@ span{
 .nav{
     background-color: var(--coloWhite);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    align-items: center;
     display: flex;
     justify-content: center;
     gap: 2em;
@@ -120,6 +121,21 @@ span{
 .nav_item:hover{
     border-color: var(--colorEnfasis);
     scale: 1.1;
+}
+
+.nav_item--button{
+    background-color: var(--colorEnfasis);
+    padding: .5em;
+    color: var(--coloWhite);
+    font-weight: var(--bold);
+    border-radius: 5px;
+    border: 2px solid var(--colorEnfasis);
+}
+
+.nav_item--button:hover{
+    background-color: var(--coloWhite);
+    color: var(--colorBlack);
+    border-color: var(--colorEnfasis);
 }
 
 
