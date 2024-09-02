@@ -444,6 +444,7 @@ span{
     max-width: 800px; 
     align-items: center;
     gap: 2em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
 .estudiante_img{
