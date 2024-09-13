@@ -1,3 +1,10 @@
+@media (width <= 1500px){
+    .iconCallToActition{
+        padding: .5em;
+        font-size: 3rem;
+    }
+}
+
 @media (width <= 1240px) {
     .containerCursos{
         justify-content: space-evenly;

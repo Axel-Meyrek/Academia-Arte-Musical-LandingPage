@@ -76,6 +76,9 @@ section, header{
 p, .formulario_label{
     line-height: 200%;
 }
+u{
+    text-decoration: underline;
+}
 
 .subtitle{
     font-size: clamp(18px, 8vw, 40px);
@@ -660,9 +663,60 @@ summary{
     transform: translateY(0);
 }
 
+/* FOOTTER */
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+    align-items: center;
+}
+
+.footer_description{
+    color: var(--coloWhite);
+    font-weight: var(--bold);
+    max-width: 400px;
+    text-align: center;
+}
+
+.footer_redes{
+    display: flex;
+    gap: 2em;
+}
+
+.iconRedes{
+    color: var(--coloWhite);
+    font-size: 1.8rem;
+    transition-duration: .3s;
+    transition-property: scale;
+}
+
+.iconRedes:hover{
+    scale: 1.2;
+}
 
 
+/* CALL TO ACTITION */
+.callToActition{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
 
+.iconCallToActition{
+    position: relative;
+    color: var(--colorEnfasis);
+    padding: 1em;
+    font-size: 4rem;
+    animation: flotar 2s ease-in-out infinite;
+    transition-duration: .3s;
+    transition-property: scale;
+
+}
+
+.iconCallToActition:hover{
+    scale: 1.2;
+}
 
 
 
