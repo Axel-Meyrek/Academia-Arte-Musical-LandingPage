@@ -64,6 +64,11 @@ p{
     font-size: clamp(12px, 3vw, 16px);
 }
 
+button{
+    background-color: transparent;
+    border: none;
+}
+
 section, header{
     padding-top: 100px;
 }
@@ -123,6 +128,8 @@ span{
     z-index: 10;
 }
 
+
+
 .nav_item{
     transition-duration: .3s;
     transition-property: color border;
@@ -148,6 +155,12 @@ span{
     background-color: var(--coloWhite);
     color: var(--colorBlack);
     border-color: var(--colorEnfasis);
+}
+
+.button_menu{
+    color: var(--colorEnfasis);
+    font-size: 1.5rem;
+    display: none;
 }
 
 
@@ -192,6 +205,7 @@ span{
     transition-duration: .3s;
     transition-property: background-color, color, scale;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
 }
 
 .botonera_item:hover{
@@ -258,6 +272,7 @@ span{
     justify-content: space-between;
     align-items: center;
     gap: 2em;
+    padding-top: 0;
 }
 
 .vision_info{
@@ -577,6 +592,7 @@ summary{
 
 .formulario_label{
     font-weight: bold;
+    font-size: clamp(12px, 3vw, 16px);
 }
 
 .formulario_button{
@@ -605,6 +621,46 @@ summary{
     padding: 3em;
     margin-top: 100px;
 }
+
+
+/* NAV FLOTANTE */
+.navFlotante{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--coloWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    transform: translateY(-100%);
+    transition-duration: transform;
+    transition-duration: .5s;
+}
+
+.navFlotante_item{
+    border-radius: 5px;
+    border: 2px solid var(--colorEnfasis);
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 0 4px var(--colorShadow);
+}
+
+.navFlotante_item:active{
+    background-color: var(--colorEnfasis);
+    color: var(--coloWhite);
+}
+
+.showMenu{
+    transform: translateY(0);
+}
+
+
 
 
 
