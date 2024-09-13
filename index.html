@@ -25,7 +25,7 @@
             <a class="nav_item" href="#opiniones">Opiniones</a>
             <a class="nav_item" href="#preguntas">Preguntas</a>
             <a class="nav_item nav_item--button" href="#contacto">Contactar</a>
-            <button class="button_menu"><i class="fa-solid fa-bars button_menu"></i></button>
+            <button id="buttonMenu" class="button_menu"><i class="fa-solid fa-bars button_menu"></i></button>
          </nav>
 
         
@@ -599,15 +599,15 @@
 
 
     <!-- VENTANA FLOTANTE -->
-    <nav class="navFlotante">
-        <a class="navFlotante_item" href="#inicio">Inicio</a>
-        <a class="navFlotante_item" href="#cursos">Cursos</a>
-        <a class="navFlotante_item" href="#roadmap">RoadMap</a>
-        <a class="navFlotante_item" href="#convenios">Convenios</a>
-        <a class="navFlotante_item" href="#estudiantes">Estudiantes Destacados</a>
-        <a class="navFlotante_item" href="#opiniones">Opiniones</a>
-        <a class="navFlotante_item" href="#preguntas">Preguntas</a>
-        <a class="navFlotante_item nav_item--button" href="#contacto">Contactar</a>
+    <nav id="navFlotante" class="navFlotante">
+        <a class="navFlotante_item" onclick="showMenu()" href="#inicio">Inicio</a>
+        <a class="navFlotante_item" onclick="showMenu()" href="#cursos">Cursos</a>
+        <a class="navFlotante_item" onclick="showMenu()" href="#roadmap">RoadMap</a>
+        <a class="navFlotante_item" onclick="showMenu()" href="#convenios">Convenios</a>
+        <a class="navFlotante_item" onclick="showMenu()" href="#estudiantes">Estudiantes Destacados</a>
+        <a class="navFlotante_item" onclick="showMenu()" href="#opiniones">Opiniones</a>
+        <a class="navFlotante_item" onclick="showMenu()" href="#preguntas">Preguntas</a>
+        <a class="navFlotante_item nav_item--button" onclick="showMenu()" href="#contacto">Contactar</a>
     </nav>
 
 
@@ -616,6 +616,7 @@
         <script src="https://kit.fontawesome.com/7b35ff6dce.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script src="particles.js"></script>
+        <script src="app.js"></script>
 
 </body>
 </html>
