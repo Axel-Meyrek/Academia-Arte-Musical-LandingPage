@@ -81,6 +81,34 @@
 
 }
 
+@media (width <= 1000px){
+    .convenio{
+        flex-direction: column;
+    }
+
+    .convenio_info{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .convenio_button{
+        width: 100%;
+        max-width: none;
+    }
+
+    .convenio_img{
+        border-radius: 100%;
+    }
+
+    .convenio_name{
+        text-align: center;
+    }
+
+    .convenio_description{
+        text-align: center;
+    }
+}
+
 @media (width <= 900px){
     .nivelCurso{
         text-align: center;
