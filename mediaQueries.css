@@ -98,6 +98,8 @@
 
     .convenio_img{
         border-radius: 100%;
+        border: 5px solid var(--colorEnfasis);
+        padding: .5em;
     }
 
     .convenio_name{
