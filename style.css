@@ -819,7 +819,7 @@ summary{
     align-items: center;
     overflow-y: scroll;
     visibility: hidden;
-    padding: 150px 0;
+    padding: 80px 0;
     
     &::-webkit-scrollbar{
         height: 0rem;
