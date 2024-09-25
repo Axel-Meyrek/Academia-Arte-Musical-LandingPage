@@ -109,6 +109,11 @@
     .convenio_description{
         text-align: center;
     }
+
+    .convenio_botonera{
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 @media (width <= 900px){
