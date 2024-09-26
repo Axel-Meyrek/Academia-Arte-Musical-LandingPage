@@ -616,7 +616,7 @@ details{
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1.5em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
@@ -629,6 +629,9 @@ summary{
     padding-top: 1em;
 }
 
+.map{
+    border-radius: 10px;
+}
 
 /* CONTACTO */
 .formulario{
