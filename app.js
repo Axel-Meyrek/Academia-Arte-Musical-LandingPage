@@ -70,7 +70,7 @@ const saveUser = (e) => {
             "ESTADO_LOCALIDAD": $estadoLocalidad.value
         }),
     })
-
+    console.log('El usuario fue guardado con éxito');
     cleanInputs();
 }
 
