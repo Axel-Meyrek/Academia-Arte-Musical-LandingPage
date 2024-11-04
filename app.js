@@ -43,7 +43,17 @@ const closeConvenio = () => {
     $convenioTEB.classList.remove('showConvenio');
 }
 
-const saveUser = (e) => {
+const cleanInputs = () => {
+    $nombreCompleto.value = '';
+    $cursoInteresado.value = '';
+    $correoElectronico.value = '';
+    $numeroCelular.value = '';
+    $estadoLocalidad.value = '';
+}
+
+
+const saveCliente = async e => {
+
     e.preventDefault();
 
     if($nombreCompleto.value == '' ||
@@ -55,31 +65,29 @@ const saveUser = (e) => {
         return;
     }
 
+    try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbwEgFE2c8_x_-3uICzyfdRAWLno2ogudYEFjMiVhjjCH2VCJSwf9dKzN-CF80C2wA3ipw/exec', {
+            mode: 'no-cors',
+            method: 'POST',
+            body: JSON.stringify({
+                "nombreCompleto": $nombreCompleto.value,
+                "cursoInteresado": $cursoInteresado.value,
+                "correoElectronico": $correoElectronico.value,
+                "numeroCelular": $numeroCelular.value,
+                "estadoLocalidad": $estadoLocalidad.value
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        console.log('Los datos se enviaron correctamente');
 
-    fetch("https://sheet.best/api/sheets/93d24933-8e35-497e-9b6f-4ed9c8570123", {
-        method: "POST",
-        mode: "cors",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            "NOMBRE_COMPLETO": $nombreCompleto.value,
-            "CURSO_INTERESADO": $cursoInteresado.value,
-            "CORREO_ELECTRONICO": $correoElectronico.value,
-            "NUMERO_CELULAR": $numeroCelular.value,
-            "ESTADO_LOCALIDAD": $estadoLocalidad.value
-        }),
-    })
-    console.log('El usuario fue guardado con éxito');
+    } catch (error) {
+        console.error('Error:', error);
+        console.log('Ocurrió un error al enviar los datos.');
+    }
+
     cleanInputs();
-}
-
-const cleanInputs = () => {
-    $nombreCompleto.value = '';
-    $cursoInteresado.value = '';
-    $correoElectronico.value = '';
-    $numeroCelular.value = '';
-    $estadoLocalidad.value = '';
 }
 
 
@@ -91,4 +99,4 @@ $buttonConvenioMAP.addEventListener('click', showConvenioMAP);
 
 $buttonConvenioTEB.addEventListener('click', showConvenioTEB);
 
-$buttonFormulario.addEventListener('click', saveUser);
+$buttonFormulario.addEventListener('click', saveCliente);
