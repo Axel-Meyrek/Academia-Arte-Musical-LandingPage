@@ -88,8 +88,18 @@ const saveCliente = async e => {
     }
 
     cleanInputs();
+    showAlertForm();
 }
 
+const removeButtonFormulario = () => {
+    $buttonFormulario.remove();
+}
+
+const showAlertForm = () => {
+    const $alertForm =  document.querySelector('#alertForm')
+    $buttonFormulario.remove();
+    $alertForm.style.visibility = 'visible';
+}
 
 
 //EVENTOS

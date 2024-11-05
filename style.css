@@ -884,3 +884,19 @@ summary{
     width: 100%;
     text-align: center;
 }
+
+/* ALERT FORMULARIO */
+.alertForm{
+    border: 4px solid var(--colorEnfasis);
+    border-radius: 5px;
+    padding: 1em;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: var(--bold);
+    box-shadow: 0 4px 10px var(--colorShadow);
+    visibility: hidden;
+}
+
+      
