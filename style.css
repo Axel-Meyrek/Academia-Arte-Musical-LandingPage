@@ -649,7 +649,7 @@ summary{
     margin: 0 auto;
 }
 
-.formulario_input{
+.formulario_input, select{
     padding: 1em;
     border-radius: 5px;
     border: none;
