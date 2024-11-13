@@ -51,6 +51,29 @@ const cleanInputs = () => {
     $estadoLocalidad.value = '';
 }
 
+const renderLoader = () => {
+    const $loader = /* html */
+        `<div id="containerLoader" class="containerLoader">
+            <span class="loader"></span>
+        </div>`
+    const $form = document.querySelector('#form');
+    $form.innerHTML += $loader;    
+}
+
+const removeLoader = () => {
+    document.querySelector('#containerLoader').remove();
+}
+
+const renderExitMessage = () => {
+    const $message = /* html */
+        `<div id="alertForm" class="alertForm">
+            <p>Tus datos se enviaron correctamente ✅</p>
+            <p>¡¡Nosotros nos pondremos en contacto contigo por correo electronico!!</p>
+        </div> `;
+    const $form = document.querySelector('#form');
+    $form.innerHTML += $message;   
+    
+}
 
 const saveCliente = async e => {
 
@@ -64,6 +87,9 @@ const saveCliente = async e => {
     ){
         return;
     }
+
+    e.target.remove();
+    renderLoader();
 
     try {
         const response = await fetch('https://script.google.com/macros/s/AKfycbzdnicOKzyizyLPjeBn4slo8dIEY5lLqzrADKRTOb2bCg9oE8iIws_rmMms0sLyUoa2Nw/exec', {
@@ -80,25 +106,19 @@ const saveCliente = async e => {
                 'Content-Type': 'application/json'
             }
         });
-        console.log('Los datos se enviaron correctamente');
 
     } catch (error) {
         console.error('Error:', error);
-        console.log('Ocurrió un error al enviar los datos.');
     }
 
+    removeLoader();
+    renderExitMessage();
+
     cleanInputs();
-    showAlertForm();
 }
 
 const removeButtonFormulario = () => {
     $buttonFormulario.remove();
-}
-
-const showAlertForm = () => {
-    const $alertForm =  document.querySelector('#alertForm')
-    $buttonFormulario.remove();
-    $alertForm.style.visibility = 'visible';
 }
 
 
